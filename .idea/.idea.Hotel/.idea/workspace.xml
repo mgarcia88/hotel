@@ -14,118 +14,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b25a741a-49f3-473e-84bd-a2d05ec5610f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hotel.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Controllers/ClientesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/DTOs/InsercaoClienteDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/DTOs/ListagemClienteDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Data/ApplicationContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Data/Configuracoes/ClienteConfiguracao.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Data/Configuracoes/HotelConfiguracao.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Data/Configuracoes/ReservaConfiguracao.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Data/Repositorios/ClienteRepositorio.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Data/Repositorios/Repositorio.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Data/UnitOfWork/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Data/UnitOfWork/UnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Dominio/Entidades/ClienteEntidade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Dominio/Entidades/Entidade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Dominio/Entidades/HotelEntidade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Dominio/Entidades/ReservaEntidade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IClienteRepositorio.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IRepositorio.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/HotelApi.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Migracoes/20201224150632_PrimeiraMigracao.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Migracoes/20201224150632_PrimeiraMigracao.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Migracoes/ApplicationContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/ValueObjects/ClienteStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/ValueObjects/ReservaStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/HotelApi.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/HotelApi.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/HotelApi.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/HotelApi.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/HotelApi.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/HotelApi.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Npgsql.EntityFrameworkCore.PostgreSQL.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Npgsql.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.MvcApplicationPartsAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.RazorTargetAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/staticwebassets/HotelApi.StaticWebAssets.Manifest.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/staticwebassets/HotelApi.StaticWebAssets.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/HotelApi.csproj.EntityFrameworkCore.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/HotelApi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/HotelApi.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/HotelApi.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelApi/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/HotelTestes.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/UnitTest1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/Debug/netcoreapp3.1/HotelTestes.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/Debug/netcoreapp3.1/HotelTestes.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/Debug/netcoreapp3.1/HotelTestes.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/Debug/netcoreapp3.1/HotelTestes.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/HotelTestes.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/HotelTestes.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/HotelTestes.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotelTestes/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obj/hotel.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obj/hotel.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obj/hotel.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelApi/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelApi/Controllers/UsuarioController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelApi/DTOs/Usuario/UsuarioInsercaoDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelApi/Data/Configuracoes/UsuarioConfiguracao.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelApi/Data/Repositorios/UsuarioRepositorio.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelApi/Dominio/Entidades/UsuarioEntidade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IUsuarioRepositorio.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelApi/ValueObjects/UsuariosGrupo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hotel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/Controllers/ClientesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/Controllers/ClientesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/DTOs/InsercaoClienteDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/DTOs/Cliente/InsercaoClienteDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/DTOs/ListagemClienteDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/DTOs/Cliente/ListagemClienteDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/Data/ApplicationContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/Data/Repositorios/ClienteRepositorio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/Data/Repositorios/ClienteRepositorio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/Data/Repositorios/Repositorio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/Data/Repositorios/Repositorio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/Data/UnitOfWork/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/Data/UnitOfWork/IUnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/Data/UnitOfWork/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/Data/UnitOfWork/UnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IClienteRepositorio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IClienteRepositorio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IRepositorio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IRepositorio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/HotelApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/HotelApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/Migracoes/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/Migracoes/ApplicationContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/HotelApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/HotelApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/HotelApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/bin/Debug/netcoreapp3.1/HotelApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HotelApi/obj/Debug/netcoreapp3.1/HotelApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelTestes/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelTestes/UnitTest1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,9 +69,7 @@
         <option value="$PROJECT_DIR$/HotelApi/Dominio/Entidades/Cliente.cs" />
         <option value="$PROJECT_DIR$/HotelApi/Data/Repositorios/IRepositorio.cs" />
         <option value="$PROJECT_DIR$/HotelApi/Dominio/Repositorio/IRepositorio.cs" />
-        <option value="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IClienteRepositorio.cs" />
         <option value="$PROJECT_DIR$/HotelApi/Data/HotelContexto.cs" />
-        <option value="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IRepositorio.cs" />
         <option value="$PROJECT_DIR$/HotelApi/Dominio/Entidades/Entidade.cs" />
         <option value="$PROJECT_DIR$/HotelApi/Dominio/Entidades/ClienteEntidade.cs" />
         <option value="$PROJECT_DIR$/HotelApi/Dominio/Entidades/HotelEntidade.cs" />
@@ -162,17 +79,30 @@
         <option value="$PROJECT_DIR$/HotelApi/Data/Configuracoes/HotelConfiguracao.cs" />
         <option value="$PROJECT_DIR$/HotelApi/Migracoes/ApplicationContextModelSnapshot.cs" />
         <option value="$PROJECT_DIR$/HotelApi/Migracoes/20201224150632_PrimeiraMigracao.Designer.cs" />
-        <option value="$PROJECT_DIR$/HotelApi/Data/ApplicationContext.cs" />
-        <option value="$PROJECT_DIR$/HotelApi/Data/Repositorios/Repositorio.cs" />
-        <option value="$PROJECT_DIR$/HotelApi/Data/Repositorios/ClienteRepositorio.cs" />
         <option value="$PROJECT_DIR$/HotelApi/Program.cs" />
-        <option value="$PROJECT_DIR$/HotelApi/Startup.cs" />
-        <option value="$PROJECT_DIR$/HotelApi/Data/UnitOfWork/IUnitOfWork.cs" />
-        <option value="$PROJECT_DIR$/HotelApi/Data/UnitOfWork/UnitOfWork.cs" />
-        <option value="$PROJECT_DIR$/HotelTestes/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/HotelApi/DTOs/InsercaoClienteDTO.cs" />
         <option value="$PROJECT_DIR$/HotelApi/DTOs/ListagemClienteDTO.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/ValueObjects/UsuariosGrupo.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Data/ApplicationContext.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IRepositorioUsuario.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Data/Repositorios/IUsuarioRepositorio.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/DTOs/Cliente/ListagemClienteDTO.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/DTOs/Usuario/UsuarioInsercaoDTO.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Dominio/Entidades/UsuarioEntidade.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Data/Configuracoes/UsuarioConfiguracao.cs" />
+        <option value="$PROJECT_DIR$/HotelTestes/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/HotelApi/Controllers/ClientesController.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IRepositorio.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IClienteRepositorio.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Data/Repositorios/ClienteRepositorio.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Data/Repositorios/UsuarioRepositorio.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Data/Repositorios/Repositorio.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Data/UnitOfWork/IUnitOfWork.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Data/UnitOfWork/UnitOfWork.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Startup.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Dominio/Repositorios/IUsuarioRepositorio.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/Controllers/UsuarioController.cs" />
+        <option value="$PROJECT_DIR$/HotelApi/.gitignore" />
       </list>
     </option>
   </component>
@@ -231,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608822220842</updated>
-      <workItem from="1608822561331" duration="9971000" />
+      <workItem from="1608822561331" duration="15804000" />
     </task>
     <servers />
   </component>
@@ -259,90 +189,90 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="444" height="464" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1608832035562" />
-    <state width="1323" height="250" key="GridCell.Tab.0.bottom" timestamp="1608833869402">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1608841231288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608833869402" />
-    <state width="1323" height="250" key="GridCell.Tab.0.center" timestamp="1608833869394">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608841231288" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1608841231288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608833869394" />
-    <state width="1323" height="250" key="GridCell.Tab.0.left" timestamp="1608833869394">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608841231288" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1608841231288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608833869394" />
-    <state width="1323" height="250" key="GridCell.Tab.0.right" timestamp="1608833869394">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608841231288" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1608841231288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608833869394" />
-    <state width="1323" height="250" key="GridCell.Tab.1.bottom" timestamp="1608833887966">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608841231288" />
+    <state width="1323" height="29" key="GridCell.Tab.1.bottom" timestamp="1608841152976">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608833887966" />
-    <state width="1323" height="250" key="GridCell.Tab.1.center" timestamp="1608833887965">
+    <state width="1323" height="29" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608841152976" />
+    <state width="1323" height="29" key="GridCell.Tab.1.center" timestamp="1608841152975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1608833887965" />
-    <state width="1323" height="250" key="GridCell.Tab.1.left" timestamp="1608833887965">
+    <state width="1323" height="29" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1608841152975" />
+    <state width="1323" height="29" key="GridCell.Tab.1.left" timestamp="1608841152975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1608833887965" />
-    <state width="1323" height="250" key="GridCell.Tab.1.right" timestamp="1608833887965">
+    <state width="1323" height="29" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1608841152975" />
+    <state width="1323" height="29" key="GridCell.Tab.1.right" timestamp="1608841152975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1608833887965" />
-    <state width="1323" height="250" key="GridCell.Tab.2.bottom" timestamp="1608833869140">
+    <state width="1323" height="29" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1608841152975" />
+    <state width="1323" height="29" key="GridCell.Tab.2.bottom" timestamp="1608841152978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608833869140" />
-    <state width="1323" height="250" key="GridCell.Tab.2.center" timestamp="1608833869139">
+    <state width="1323" height="29" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608841152978" />
+    <state width="1323" height="29" key="GridCell.Tab.2.center" timestamp="1608841152978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1608833869139" />
-    <state width="1323" height="250" key="GridCell.Tab.2.left" timestamp="1608833869139">
+    <state width="1323" height="29" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1608841152978" />
+    <state width="1323" height="29" key="GridCell.Tab.2.left" timestamp="1608841152977">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1608833869139" />
-    <state width="1323" height="250" key="GridCell.Tab.2.right" timestamp="1608833869140">
+    <state width="1323" height="29" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1608841152977" />
+    <state width="1323" height="29" key="GridCell.Tab.2.right" timestamp="1608841152978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1608833869140" />
-    <state width="1323" height="250" key="GridCell.Tab.3.bottom" timestamp="1608833869140">
+    <state width="1323" height="29" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1608841152978" />
+    <state width="1323" height="29" key="GridCell.Tab.3.bottom" timestamp="1608841152980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608833869140" />
-    <state width="1323" height="250" key="GridCell.Tab.3.center" timestamp="1608833869140">
+    <state width="1323" height="29" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608841152980" />
+    <state width="1323" height="29" key="GridCell.Tab.3.center" timestamp="1608841152979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1608833869140" />
-    <state width="1323" height="250" key="GridCell.Tab.3.left" timestamp="1608833869140">
+    <state width="1323" height="29" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1608841152979" />
+    <state width="1323" height="29" key="GridCell.Tab.3.left" timestamp="1608841152979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1608833869140" />
-    <state width="1323" height="250" key="GridCell.Tab.3.right" timestamp="1608833869140">
+    <state width="1323" height="29" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1608841152979" />
+    <state width="1323" height="29" key="GridCell.Tab.3.right" timestamp="1608841152979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1608833869140" />
-    <state width="1323" height="250" key="GridCell.Tab.4.bottom" timestamp="1608833869140">
+    <state width="1323" height="29" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1608841152979" />
+    <state width="1323" height="29" key="GridCell.Tab.4.bottom" timestamp="1608841152980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.4.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608833869140" />
-    <state width="1323" height="250" key="GridCell.Tab.4.center" timestamp="1608833869140">
+    <state width="1323" height="29" key="GridCell.Tab.4.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608841152980" />
+    <state width="1323" height="29" key="GridCell.Tab.4.center" timestamp="1608841152980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.4.center/0.0.1366.728@0.0.1366.728" timestamp="1608833869140" />
-    <state width="1323" height="250" key="GridCell.Tab.4.left" timestamp="1608833869140">
+    <state width="1323" height="29" key="GridCell.Tab.4.center/0.0.1366.728@0.0.1366.728" timestamp="1608841152980" />
+    <state width="1323" height="29" key="GridCell.Tab.4.left" timestamp="1608841152980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.4.left/0.0.1366.728@0.0.1366.728" timestamp="1608833869140" />
-    <state width="1323" height="250" key="GridCell.Tab.4.right" timestamp="1608833869140">
+    <state width="1323" height="29" key="GridCell.Tab.4.left/0.0.1366.728@0.0.1366.728" timestamp="1608841152980" />
+    <state width="1323" height="29" key="GridCell.Tab.4.right" timestamp="1608841152980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.4.right/0.0.1366.728@0.0.1366.728" timestamp="1608833869140" />
-    <state x="473" y="54" key="RiderGenerateDialog" timestamp="1608826806030">
+    <state width="1323" height="29" key="GridCell.Tab.4.right/0.0.1366.728@0.0.1366.728" timestamp="1608841152980" />
+    <state x="473" y="54" key="RiderGenerateDialog" timestamp="1608838178696">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="473" y="54" key="RiderGenerateDialog/0.0.1366.728@0.0.1366.728" timestamp="1608826806030" />
+    <state x="473" y="54" key="RiderGenerateDialog/0.0.1366.728@0.0.1366.728" timestamp="1608838178696" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -352,26 +282,39 @@
           <line>17</line>
           <properties documentPath="C:\src\projetos\hotel\HotelTestes\UnitTest1.cs" initialLine="14">
             <startOffsets>
-              <option value="413" />
+              <option value="415" />
             </startOffsets>
             <endOffsets>
-              <option value="496" />
+              <option value="498" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/HotelApi/Controllers/ClientesController.cs</url>
-          <line>28</line>
+          <line>29</line>
           <properties documentPath="C:\src\projetos\hotel\HotelApi\Controllers\ClientesController.cs" initialLine="27">
             <startOffsets>
-              <option value="1035" />
+              <option value="1057" />
             </startOffsets>
             <endOffsets>
-              <option value="1310" />
+              <option value="1332" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HotelApi/Controllers/UsuarioController.cs</url>
+          <line>28</line>
+          <properties documentPath="C:\src\projetos\hotel\HotelApi\Controllers\UsuarioController.cs" initialLine="28">
+            <startOffsets>
+              <option value="1015" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1233" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

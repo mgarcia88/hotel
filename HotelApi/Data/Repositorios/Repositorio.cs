@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using HotelApi.Dominio.Entidades;
-using HotelApi.Dominio.Entidades.Repositorio;
+using HotelApi.Dominio.Repositorio;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelApi.Data.Repositorios

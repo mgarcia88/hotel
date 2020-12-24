@@ -3,15 +3,17 @@ using System;
 using HotelApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace HotelApi.Migracoes
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20201224192325_CriandoOModelodeUsuarios")]
+    partial class CriandoOModelodeUsuarios
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -126,7 +128,7 @@ namespace HotelApi.Migracoes
                     b.ToTable("Reservas");
                 });
 
-            modelBuilder.Entity("HotelApi.Dominio.Entidades.Usuario", b =>
+            modelBuilder.Entity("HotelApi.Dominio.Entidades.UsuarioEntidade", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -138,13 +140,13 @@ namespace HotelApi.Migracoes
                         .HasColumnType("DATE")
                         .HasDefaultValueSql("NOW()");
 
-                    b.Property<string>("Login")
-                        .IsRequired()
-                        .HasColumnType("VARCHAR(12)");
-
-                    b.Property<string>("Senha")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("VARCHAR(10)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(12)");
 
                     b.Property<int>("UsuariosGrupo")
                         .HasColumnType("integer");

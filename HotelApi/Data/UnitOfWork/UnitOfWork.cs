@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using HotelApi.Dominio.Entidades.Repositorio;
+﻿using HotelApi.Dominio.Repositorio;
 
 namespace HotelApi.Data.UnitOfWork
 {
@@ -8,12 +7,16 @@ namespace HotelApi.Data.UnitOfWork
         private readonly ApplicationContext _dbContexto;
 
         public IClienteRepositorio ClienteRepositorio { get; }
+        
+        public IUsuarioRepositorio UsuarioRepositorio { get; }
 
         public UnitOfWork(ApplicationContext dbContexto,
-            IClienteRepositorio clienteRepositorio)
+            IClienteRepositorio clienteRepositorio,
+            IUsuarioRepositorio usuarioRepositorio)
         {
             _dbContexto = dbContexto;
             ClienteRepositorio = clienteRepositorio;
+            UsuarioRepositorio = usuarioRepositorio;
         }
         
         public void Commit()

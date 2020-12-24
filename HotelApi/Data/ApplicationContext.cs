@@ -20,6 +20,7 @@ namespace HotelApi.Data
             modelBuilder.ApplyConfiguration(new ClienteConfiguracao());
             modelBuilder.ApplyConfiguration(new HotelConfiguracao());
             modelBuilder.ApplyConfiguration(new ReservaConfiguracao());
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguracao());
 
             //modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationContext).Assembly);
         }

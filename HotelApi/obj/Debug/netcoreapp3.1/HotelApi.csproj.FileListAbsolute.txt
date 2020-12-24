@@ -1,3 +1,9 @@
+C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.csprojAssemblyReference.cache
+C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.AssemblyInfoInputs.cache
+C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.AssemblyInfo.cs
+C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.csproj.CoreCompileInputs.cache
+C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.MvcApplicationPartsAssemblyInfo.cs
+C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.MvcApplicationPartsAssemblyInfo.cache
 C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\appsettings.json
 C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -24,13 +30,12 @@ C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logg
 C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Npgsql.dll
 C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.csprojAssemblyReference.cache
-C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.AssemblyInfoInputs.cache
-C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.AssemblyInfo.cs
-C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.csproj.CoreCompileInputs.cache
-C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.MvcApplicationPartsAssemblyInfo.cache
+C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.RazorTargetAssemblyInfo.cache
 C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.csproj.CopyComplete
 C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\staticwebassets\HotelApi.StaticWebAssets.Manifest.cache
@@ -38,8 +43,3 @@ C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\staticwebassets\HotelApi.
 C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.dll
 C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.pdb
 C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.genruntimeconfig.cache
-C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
-C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
-C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\src\projetos\hotel\HotelApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\src\projetos\hotel\HotelApi\obj\Debug\netcoreapp3.1\HotelApi.MvcApplicationPartsAssemblyInfo.cs

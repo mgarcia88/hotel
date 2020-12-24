@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using HotelApi.Dominio.Entidades;
 
-namespace HotelApi.Dominio.Entidades.Repositorio
+namespace HotelApi.Dominio.Repositorio
 {
     public interface IRepositorio<T> where T : Entidade
     {

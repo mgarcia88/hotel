@@ -1,5 +1,5 @@
 ﻿
-using HotelApi.Dominio.Entidades.Repositorio;
+using HotelApi.Dominio.Repositorio;
 
 namespace HotelApi.Data.UnitOfWork
 {
@@ -8,5 +8,6 @@ namespace HotelApi.Data.UnitOfWork
         void Commit();
         
         IClienteRepositorio ClienteRepositorio { get; } 
+        IUsuarioRepositorio UsuarioRepositorio { get; }
     }
 }

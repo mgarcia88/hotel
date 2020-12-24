@@ -1,20 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using HotelApi.Data;
 using HotelApi.Data.Repositorios;
 using HotelApi.Data.UnitOfWork;
-using HotelApi.Dominio.Entidades;
-using HotelApi.Dominio.Entidades.Repositorio;
+using HotelApi.Dominio.Repositorio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace HotelApi
 {
@@ -37,6 +29,7 @@ namespace HotelApi
             services.AddDbContext<ApplicationContext>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
+            services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

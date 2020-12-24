@@ -1,5 +1,5 @@
 ﻿using HotelApi.Dominio.Entidades;
-using HotelApi.Dominio.Entidades.Repositorio;
+using HotelApi.Dominio.Repositorio;
 
 namespace HotelApi.Data.Repositorios
 {

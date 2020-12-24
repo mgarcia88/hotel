@@ -20,12 +20,12 @@ namespace HotelApi.Controllers
             _unitOfWork = unitOfWork;
         }
         
-        [HttpPost("Inserircliente")]
+        [HttpPost("InserirCliente")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> InserirCliente(InsercaoClienteDTO insercaoClienteDto)
+        public IActionResult InserirCliente(InsercaoClienteDTO insercaoClienteDto)
         {
             var Cliente = new Cliente
             {
@@ -44,7 +44,7 @@ namespace HotelApi.Controllers
 
         [HttpGet]
         [ProducesResponseType(typeof(List<ListagemClienteDTO>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> ObterTodosClientes()
+        public IActionResult ObterTodosClientes()
         {
             var todosClientes = _unitOfWork.ClienteRepositorio.ObterTodos()
                 .Select(x => 
@@ -52,7 +52,7 @@ namespace HotelApi.Controllers
                         Documento = x.Documento, ClienteStatus = x.ClienteStatus})
                 .ToList();
 
-            return Ok(todosClientes);
+            return Ok(todosClientes.OrderBy(c => c.Id));
         }
     }
 }

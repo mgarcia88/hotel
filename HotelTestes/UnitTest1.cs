@@ -15,7 +15,7 @@ namespace HotelTestes
         {
             var db = new ApplicationContext();
             
-            var _iUnitOfWork = 
+            /*var _iUnitOfWork = 
                 new UnitOfWork(db, new ClienteRepositorio(db));
             
             var Cliente = new Cliente
@@ -28,7 +28,7 @@ namespace HotelTestes
 
             _iUnitOfWork.ClienteRepositorio.Incluir(Cliente);
             
-            _iUnitOfWork.Commit();
+            _iUnitOfWork.Commit();*/
         }
     }
 }

@@ -9,6 +9,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="ClientesController.cs" t="Include" />
+          <e p="UsuarioController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="ApplicationContext.cs" t="Include" />
@@ -16,10 +17,12 @@
             <e p="ClienteConfiguracao.cs" t="Include" />
             <e p="HotelConfiguracao.cs" t="Include" />
             <e p="ReservaConfiguracao.cs" t="Include" />
+            <e p="UsuarioConfiguracao.cs" t="Include" />
           </e>
           <e p="Repositorios" t="Include">
             <e p="ClienteRepositorio.cs" t="Include" />
             <e p="Repositorio.cs" t="Include" />
+            <e p="UsuarioRepositorio.cs" t="Include" />
           </e>
           <e p="UnitOfWork" t="Include">
             <e p="IUnitOfWork.cs" t="Include" />
@@ -32,15 +35,22 @@
             <e p="Entidade.cs" t="Include" />
             <e p="HotelEntidade.cs" t="Include" />
             <e p="ReservaEntidade.cs" t="Include" />
+            <e p="UsuarioEntidade.cs" t="Include" />
           </e>
           <e p="Repositorios" t="Include">
             <e p="IClienteRepositorio.cs" t="Include" />
             <e p="IRepositorio.cs" t="Include" />
+            <e p="IUsuarioRepositorio.cs" t="Include" />
           </e>
         </e>
         <e p="DTOs" t="Include">
-          <e p="InsercaoClienteDTO.cs" t="Include" />
-          <e p="ListagemClienteDTO.cs" t="Include" />
+          <e p="Cliente" t="Include">
+            <e p="InsercaoClienteDTO.cs" t="Include" />
+            <e p="ListagemClienteDTO.cs" t="Include" />
+          </e>
+          <e p="Usuario" t="Include">
+            <e p="UsuarioInsercaoDTO.cs" t="Include" />
+          </e>
         </e>
         <e p="HotelApi.csproj" t="IncludeRecursive" />
         <e p="Migracoes" t="Include">
@@ -48,6 +58,10 @@
           <e p="20201224150632_PrimeiraMigracao.Designer.cs" t="Include" />
           <e p="20201224173145_AlteracoesEstruturasdasTabelas.cs" t="Include" />
           <e p="20201224173145_AlteracoesEstruturasdasTabelas.Designer.cs" t="Include" />
+          <e p="20201224192325_CriandoOModelodeUsuarios.cs" t="Include" />
+          <e p="20201224192325_CriandoOModelodeUsuarios.Designer.cs" t="Include" />
+          <e p="20201224201418_AlterandoOModelodeUsuarios.cs" t="Include" />
+          <e p="20201224201418_AlterandoOModelodeUsuarios.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -65,6 +79,7 @@
         <e p="ValueObjects" t="Include">
           <e p="ClienteStatus.cs" t="Include" />
           <e p="ReservaStatus.cs" t="Include" />
+          <e p="UsuariosGrupo.cs" t="Include" />
         </e>
       </e>
       <e p="HotelTestes" t="IncludeRecursive">

@@ -7,9 +7,9 @@ namespace HotelApi.Dominio.Entidades
     {
         public string Nome { get; set; }
 
-        public string Documento { get; set; }
+        public Cpf Documento { get; set; }
 
-        public string Email { get; set; }
+        public Email Email { get; set; }
 
         public ClienteStatus ClienteStatus { get; set; }
     }

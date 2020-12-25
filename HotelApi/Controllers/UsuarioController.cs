@@ -19,6 +19,7 @@ namespace HotelApi.Controllers
             _unitOfWork = unitOfWork;
         }
 
+        
         [HttpPost("InserirUsuario")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]

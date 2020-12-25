@@ -2,6 +2,8 @@ using HotelApi.Data;
 using HotelApi.Data.Repositorios;
 using HotelApi.Data.UnitOfWork;
 using HotelApi.Dominio.Repositorio;
+using HotelApi.Dominio.Servicos;
+using HotelApi.Servicos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -30,6 +32,7 @@ namespace HotelApi
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
             services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            services.AddScoped<IClienteServico, ClienteServico>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

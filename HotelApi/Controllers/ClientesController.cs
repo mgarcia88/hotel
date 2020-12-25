@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using HotelApi.Data.UnitOfWork;
-using HotelApi.Dominio.Entidades;
+using HotelApi.Dominio.Servicos;
 using HotelApi.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,13 +12,13 @@ namespace HotelApi.Controllers
     [Route("api/v1/[controller]")]
     public class ClientesController : ControllerBase
     {
-        private IUnitOfWork _unitOfWork;
-        
-        public ClientesController(IUnitOfWork unitOfWork)
+        private IClienteServico _clienteServico;
+
+        public ClientesController(IClienteServico clienteServico)
         {
-            _unitOfWork = unitOfWork;
+            _clienteServico = clienteServico;
         }
-        
+
         [HttpPost("InserirCliente")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]
@@ -27,31 +26,23 @@ namespace HotelApi.Controllers
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status500InternalServerError)]
         public IActionResult InserirCliente(InsercaoClienteDTO insercaoClienteDto)
         {
-            var Cliente = new Cliente
+            try
             {
-                Nome = insercaoClienteDto.Nome,
-                Email = insercaoClienteDto.Email,
-                Documento = insercaoClienteDto.Documento,
-                ClienteStatus = insercaoClienteDto.ClienteStatus
-            };
-            
-            _unitOfWork.ClienteRepositorio.Incluir(Cliente);
-            
-            _unitOfWork.Commit();
+                _clienteServico.InserirCliente(insercaoClienteDto);
+            }
+            catch (ArgumentException e)
+            {
+                return Problem(e.Message, statusCode: StatusCodes.Status400BadRequest);
+            }
 
-           return Ok();
+            return Ok();
         }
 
         [HttpGet]
         [ProducesResponseType(typeof(List<ListagemClienteDTO>), StatusCodes.Status200OK)]
         public IActionResult ObterTodosClientes()
         {
-            var todosClientes = _unitOfWork.ClienteRepositorio.ObterTodos()
-                .Select(x => 
-                    new ListagemClienteDTO() { Id = x.Id, Nome = x.Nome, Email = x.Email, 
-                        Documento = x.Documento, ClienteStatus = x.ClienteStatus})
-                .ToList();
-
+            var todosClientes = _clienteServico.RecuperarClientes();
             return Ok(todosClientes.OrderBy(c => c.Id));
         }
     }

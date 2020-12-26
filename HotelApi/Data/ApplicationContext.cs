@@ -21,6 +21,9 @@ namespace HotelApi.Data
             modelBuilder.ApplyConfiguration(new HotelConfiguracao());
             modelBuilder.ApplyConfiguration(new ReservaConfiguracao());
             modelBuilder.ApplyConfiguration(new UsuarioConfiguracao());
+            modelBuilder.ApplyConfiguration(new PessoaConfiguracao());
+            modelBuilder.ApplyConfiguration(new FuncionarioConfiguracao());
+            modelBuilder.ApplyConfiguration(new EnderecoConfiguracao());
 
             //modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationContext).Assembly);
         }

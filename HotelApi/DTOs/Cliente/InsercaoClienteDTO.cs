@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using HotelApi.Dominio.Entidades;
 using HotelApi.ValueObjects;
 
 namespace HotelApi.DTOs
@@ -16,7 +17,12 @@ namespace HotelApi.DTOs
         public string Documento { get; set; }
         
         [Required(ErrorMessage = "O campo status é obrigatório")] 
-        [EnumDataType(typeof(ClienteStatus), ErrorMessage = "Status inválido")]
-        public ClienteStatus ClienteStatus { get; set; }
+        [EnumDataType(typeof(StatusPessoa), ErrorMessage = "Status inválido")]
+        public StatusPessoa ClienteStatus { get; set; }
+
+        [Required(ErrorMessage = "O campo telefone celular é obrigatório")] 
+        public string TelefoneCelular { get; set; }
+
+        public Endereco Endereco { get; set; }
     }
 }

@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -16,16 +18,36 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Controllers\WeatherForecastController.cs" />
     <Compile Remove="WeatherForecast.cs" />
     <Compile Remove="Data\Repositorios\IRepositorio.cs" />
+    <Compile Remove="ValueObjects\CPF.cs" />
+    <Compile Include="ValueObjects\Cpf.cs" />
+    <Compile Remove="Exceptios\**" />
+    <Compile Remove="Configuracoes\**" />
+    <Compile Remove="Dominio\Repositorios\IServicoToken.cs" />
+    <Compile Remove="Dominio\Servicos\IServicoToken.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove=".gitignore" />
+    <None Remove="Exceptios\**" />
+    <None Remove="Configuracoes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Exceptios\**" />
+    <EmbeddedResource Remove="Configuracoes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Exceptios\**" />
+    <Content Remove="Configuracoes\**" />
   </ItemGroup>
 
 

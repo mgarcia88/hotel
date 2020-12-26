@@ -15,12 +15,17 @@
           <e p="ApplicationContext.cs" t="Include" />
           <e p="Configuracoes" t="Include">
             <e p="ClienteConfiguracao.cs" t="Include" />
+            <e p="EnderecoConfiguracao.cs" t="Include" />
+            <e p="FuncionarioConfiguracao.cs" t="Include" />
             <e p="HotelConfiguracao.cs" t="Include" />
+            <e p="PessoaConfiguracao.cs" t="Include" />
             <e p="ReservaConfiguracao.cs" t="Include" />
             <e p="UsuarioConfiguracao.cs" t="Include" />
           </e>
           <e p="Repositorios" t="Include">
             <e p="ClienteRepositorio.cs" t="Include" />
+            <e p="EnderecoRepositorio.cs" t="Include" />
+            <e p="PessoaRepositorio.cs" t="Include" />
             <e p="Repositorio.cs" t="Include" />
             <e p="UsuarioRepositorio.cs" t="Include" />
           </e>
@@ -32,15 +37,25 @@
         <e p="Dominio" t="Include">
           <e p="Entidades" t="Include">
             <e p="ClienteEntidade.cs" t="Include" />
+            <e p="Endereco.cs" t="Include" />
             <e p="Entidade.cs" t="Include" />
+            <e p="Funcionario.cs" t="Include" />
             <e p="HotelEntidade.cs" t="Include" />
+            <e p="Pessoa.cs" t="Include" />
             <e p="ReservaEntidade.cs" t="Include" />
             <e p="UsuarioEntidade.cs" t="Include" />
           </e>
           <e p="Repositorios" t="Include">
             <e p="IClienteRepositorio.cs" t="Include" />
+            <e p="IEnderecoRepositorio.cs" t="Include" />
+            <e p="IPessoaRepositorio.cs" t="Include" />
             <e p="IRepositorio.cs" t="Include" />
             <e p="IUsuarioRepositorio.cs" t="Include" />
+          </e>
+          <e p="Servicos" t="Include">
+            <e p="IClienteServico.cs" t="Include" />
+            <e p="ITokenServico.cs" t="Include" />
+            <e p="IUsuarioServico.cs" t="Include" />
           </e>
         </e>
         <e p="DTOs" t="Include">
@@ -52,6 +67,9 @@
             <e p="UsuarioInsercaoDTO.cs" t="Include" />
           </e>
         </e>
+        <e p="Excecões" t="Include">
+          <e p="UsuarioNaoEncontradoExceção.cs" t="Include" />
+        </e>
         <e p="HotelApi.csproj" t="IncludeRecursive" />
         <e p="Migracoes" t="Include">
           <e p="20201224150632_PrimeiraMigracao.cs" t="Include" />
@@ -62,6 +80,14 @@
           <e p="20201224192325_CriandoOModelodeUsuarios.Designer.cs" t="Include" />
           <e p="20201224201418_AlterandoOModelodeUsuarios.cs" t="Include" />
           <e p="20201224201418_AlterandoOModelodeUsuarios.Designer.cs" t="Include" />
+          <e p="20201225182812_AlterandoTipoDoDocumento.cs" t="Include" />
+          <e p="20201225182812_AlterandoTipoDoDocumento.Designer.cs" t="Include" />
+          <e p="20201225192258_AlterandoTipoDoEmail.cs" t="Include" />
+          <e p="20201225192258_AlterandoTipoDoEmail.Designer.cs" t="Include" />
+          <e p="20201226144957_IncluindoCampoDocumentoModeloHotel.cs" t="Include" />
+          <e p="20201226144957_IncluindoCampoDocumentoModeloHotel.Designer.cs" t="Include" />
+          <e p="20201226183923_RefatorandoABase.cs" t="Include" />
+          <e p="20201226183923_RefatorandoABase.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -75,10 +101,18 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="Servicos" t="Include">
+          <e p="ClienteServico.cs" t="Include" />
+          <e p="TokenServico.cs" t="Include" />
+          <e p="UsuarioServico.cs" t="Include" />
+        </e>
         <e p="Startup.cs" t="Include" />
         <e p="ValueObjects" t="Include">
-          <e p="ClienteStatus.cs" t="Include" />
+          <e p="Cnpj.cs" t="Include" />
+          <e p="CPF.cs" t="Include" />
+          <e p="Email.cs" t="Include" />
           <e p="ReservaStatus.cs" t="Include" />
+          <e p="StatusPessoa.cs" t="Include" />
           <e p="UsuariosGrupo.cs" t="Include" />
         </e>
       </e>

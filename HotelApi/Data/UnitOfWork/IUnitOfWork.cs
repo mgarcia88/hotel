@@ -9,5 +9,7 @@ namespace HotelApi.Data.UnitOfWork
         
         IClienteRepositorio ClienteRepositorio { get; } 
         IUsuarioRepositorio UsuarioRepositorio { get; }
+        IPessoaRepositorio PessoaRepositorio { get; }
+        IEnderecoRepositorio EnderecoRepositorio { get; }
     }
 }

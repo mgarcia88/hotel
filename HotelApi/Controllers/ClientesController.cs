@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HotelApi.Dominio.Servicos;
 using HotelApi.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,7 @@ namespace HotelApi.Controllers
         }
 
         [HttpPost("InserirCliente")]
+        [Authorize(Roles = "Admin")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status404NotFound)]
@@ -39,6 +41,7 @@ namespace HotelApi.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         [ProducesResponseType(typeof(List<ListagemClienteDTO>), StatusCodes.Status200OK)]
         public IActionResult ObterTodosClientes()
         {

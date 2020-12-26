@@ -18,12 +18,32 @@ namespace HotelApi.Servicos
         
         public Cliente InserirCliente(InsercaoClienteDTO insercaoClienteDto)
         {
-            var Cliente = new Cliente
+            var Endereco = new Endereco
+            {
+                Cep    = insercaoClienteDto.Endereco.Cep,
+                Logradouro = insercaoClienteDto.Endereco.Logradouro,
+                Bairro = insercaoClienteDto.Endereco.Bairro,
+                Numero = insercaoClienteDto.Endereco.Numero,
+                CidadeId = 1,
+                Complemento = insercaoClienteDto.Endereco.Complemento
+            };
+
+            _unitOfWork.EnderecoRepositorio.Incluir(Endereco);
+
+            var Pessoa = new Pessoa
             {
                 Nome = insercaoClienteDto.Nome,
-                Email = insercaoClienteDto.Email,
                 Documento = insercaoClienteDto.Documento,
-                ClienteStatus = insercaoClienteDto.ClienteStatus
+                Email = insercaoClienteDto.Email,
+                //EnderecoId = enderecoId
+            };
+
+            var pessoaId = _unitOfWork.PessoaRepositorio.Incluir(Pessoa).Id;
+            
+            var Cliente = new Cliente
+            {
+                TelefoneCelular = insercaoClienteDto.TelefoneCelular,
+                PessoaId = pessoaId
             };
             
             var retorno =_unitOfWork.ClienteRepositorio.Incluir(Cliente);
@@ -39,8 +59,7 @@ namespace HotelApi.Servicos
                 .Select(x =>
                     new ListagemClienteDTO()
                     {
-                        Id = x.Id, Nome = x.Nome, Email = x.Email.ToString(),
-                        Documento = x.Documento.ToString(), ClienteStatus = x.ClienteStatus
+                        Id = x.Id, //ClienteStatus = x.ClienteStatus
                     })
                 .ToList();
 

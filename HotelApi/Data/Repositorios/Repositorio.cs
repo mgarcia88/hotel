@@ -45,5 +45,6 @@ namespace HotelApi.Data.Repositorios
             DbSet.Update(entity);
             return entity;
         }
+        
     }
 }

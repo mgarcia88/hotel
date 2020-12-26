@@ -8,6 +8,6 @@ namespace HotelApi.DTOs
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Documento { get; set; }
-        public ClienteStatus ClienteStatus { get; set; }
+        public StatusPessoa ClienteStatus { get; set; }
     }
 }

@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
-using HotelApi.Data.UnitOfWork;
-using HotelApi.Dominio.Entidades;
-using HotelApi.DTOs;
+﻿using System;
+using HotelApi.Dominio.Servicos;
 using HotelApi.DTOs.Usuario;
+using HotelApi.Excecões;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,31 +12,59 @@ namespace HotelApi.Controllers
     [Route("api/v1/[controller]")]
     public class UsuarioController : ControllerBase
     {
-        private IUnitOfWork _unitOfWork;
+        private IUsuarioServico _usuarioServico;
 
-        public UsuarioController(IUnitOfWork unitOfWork)
+        public UsuarioController(IUsuarioServico usuarioServico)
         {
-            _unitOfWork = unitOfWork;
+            _usuarioServico = usuarioServico;
         }
 
         
         [HttpPost("InserirUsuario")]
+        [Authorize(Roles = "Admin")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status500InternalServerError)]
+        public IActionResult InserirUsuario(UsuarioInsercaoDTO usuarioInsercaoDto)
+        {
+            try
+            {
+                _usuarioServico.InserirUsuario(usuarioInsercaoDto);
+            }
+            catch (ArgumentException ex)
+            {
+                return Problem(ex.Message, statusCode: StatusCodes.Status400BadRequest);
+            }
+            
+            return  Ok();
+        }
+
+        [HttpPost("LoginComSenha")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status500InternalServerError)]
-        public IActionResult InserirUsuario(UsuarioInsercaoDTO usuarioInsercaoDto)
+        public IActionResult AutenticarUsuarioComLogineSenha(string login, string senha)
         {
-            var usuario = new Usuario
+            if (login == string.Empty)
             {
-                Login = usuarioInsercaoDto.Login,
-                Senha = usuarioInsercaoDto.Senha,
-                UsuariosGrupo = usuarioInsercaoDto.UsuarioGrupo
-            };
+                return Problem("O campo login é obrigatório", statusCode: StatusCodes.Status400BadRequest);
+            }
             
-            _unitOfWork.UsuarioRepositorio.Incluir(usuario);
-            _unitOfWork.Commit();
-            return  Ok();
+            if (senha == string.Empty)
+            {
+                return Problem("O campo senha é obrigatório", statusCode: StatusCodes.Status400BadRequest);
+            }
+
+            try
+            {
+               return Ok(_usuarioServico.AutenticarUsuarioComLogineSenha(login, senha));
+            }
+            catch (UsuarioNaoEncontradoExceção e)
+            {
+                return Problem(e.Message, statusCode: StatusCodes.Status401Unauthorized);
+            }
         }
     }
 }

@@ -2,8 +2,8 @@
 
 namespace HotelApi.Dominio.Repositorio
 {
-    public interface IClienteRepositorio: IRepositorio<Cliente>
+    public interface IPessoaRepositorio : IRepositorio<Pessoa>
     {
-
+        
     }
 }

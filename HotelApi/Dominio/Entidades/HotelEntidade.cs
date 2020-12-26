@@ -1,4 +1,5 @@
 ﻿using System;
+using HotelApi.ValueObjects;
 
 namespace HotelApi.Dominio.Entidades
 {
@@ -11,5 +12,15 @@ namespace HotelApi.Dominio.Entidades
         public double ValorFinalDeSemana { get; set; }
 
         public double ValorDuranteSemana { get; set; }
+
+        public Cnpj Documento { get; set; }
+
+        public string TelefonePrincipal { get; set; }
+
+        public string TelefoneSecundario { get; set; }
+
+        public Endereco Endereco { get; set; }
+
+        public int EnderecoId { get; set; }
     }
 }

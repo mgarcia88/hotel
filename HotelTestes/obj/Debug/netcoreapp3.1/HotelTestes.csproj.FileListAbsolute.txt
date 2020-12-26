@@ -116,3 +116,7 @@ C:\src\projetos\hotel\HotelTestes\obj\Debug\netcoreapp3.1\HotelTestes.csproj.Cop
 C:\src\projetos\hotel\HotelTestes\obj\Debug\netcoreapp3.1\HotelTestes.dll
 C:\src\projetos\hotel\HotelTestes\obj\Debug\netcoreapp3.1\HotelTestes.pdb
 C:\src\projetos\hotel\HotelTestes\obj\Debug\netcoreapp3.1\HotelTestes.genruntimeconfig.cache
+c:\src\projetos\hotel\HotelTestes\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+c:\src\projetos\hotel\HotelTestes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+c:\src\projetos\hotel\HotelTestes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+c:\src\projetos\hotel\HotelTestes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

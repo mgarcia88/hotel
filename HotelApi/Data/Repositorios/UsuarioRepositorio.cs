@@ -1,5 +1,8 @@
-﻿using HotelApi.Dominio.Entidades;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using HotelApi.Dominio.Entidades;
 using HotelApi.Dominio.Repositorio;
+using Microsoft.EntityFrameworkCore;
 
 namespace HotelApi.Data.Repositorios
 {
@@ -7,6 +10,12 @@ namespace HotelApi.Data.Repositorios
     {
         public UsuarioRepositorio(ApplicationContext dbContext) : base(dbContext)
         {
+        }
+
+        public async Task<Usuario> AutenticarUsuarioComLogineSenha(string login, string senha)
+        {
+           return await DbSet.AsNoTracking().
+                FirstOrDefaultAsync(u => u.Login == login && u.Senha == senha);
         }
     }
 }

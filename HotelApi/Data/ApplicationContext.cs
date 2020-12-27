@@ -9,6 +9,18 @@ namespace HotelApi.Data
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<Reserva> Reservas { get; set; }
+        public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Funcionario> Funcionarios { get; set; }
+        
+        // Necessário para o EF Tools
+        public ApplicationContext()
+        {
+        }
+
+        public ApplicationContext(DbContextOptions<ApplicationContext> opcoes) : base(opcoes)
+        {
+        }
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

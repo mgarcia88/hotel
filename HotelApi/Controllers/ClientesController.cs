@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HotelApi.Dominio.Servicos;
 using HotelApi.DTOs;
+using HotelApi.DTOs.Cliente;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -28,15 +29,13 @@ namespace HotelApi.Controllers
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status500InternalServerError)]
         public IActionResult InserirCliente(InsercaoClienteDTO insercaoClienteDto)
         {
-            try
-            {
-                _clienteServico.InserirCliente(insercaoClienteDto);
-            }
-            catch (ArgumentException e)
-            {
-                return Problem(e.Message, statusCode: StatusCodes.Status400BadRequest);
-            }
+            var resultadoInsercao = _clienteServico.InserirCliente(insercaoClienteDto).Result;
 
+            if (!resultadoInsercao.sucesso)
+            {
+                return Problem(resultadoInsercao.erro, statusCode: StatusCodes.Status400BadRequest);
+            }
+            
             return Ok();
         }
 

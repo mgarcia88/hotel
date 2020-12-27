@@ -73,6 +73,8 @@ namespace HotelApi
             services.AddScoped<ITokenServico, TokenServico>();
             services.AddScoped<IPessoaRepositorio, PessoaRepositorio>();
             services.AddScoped<IEnderecoRepositorio, EnderecoRepositorio>();
+            services.AddScoped<IEnderecoServico, EnderecoServico>();
+            services.AddScoped<IPessoaServico, PessoaServico>();
             
             var key = Encoding.ASCII.GetBytes("fedaf7d8863b48e197b9287d492b708e");
             services.AddAuthentication(x =>

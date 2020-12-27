@@ -1,5 +1,6 @@
 ﻿using System;
 using HotelApi.Dominio.Servicos;
+using HotelApi.DTOs.Login;
 using HotelApi.DTOs.Usuario;
 using HotelApi.Excecões;
 using Microsoft.AspNetCore.Authorization;
@@ -45,21 +46,21 @@ namespace HotelApi.Controllers
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status500InternalServerError)]
-        public IActionResult AutenticarUsuarioComLogineSenha(string login, string senha)
+        public IActionResult AutenticarUsuarioComLogineSenha(LoginDTO loginDto)
         {
-            if (login == string.Empty)
+            if (loginDto.Login == string.Empty)
             {
                 return Problem("O campo login é obrigatório", statusCode: StatusCodes.Status400BadRequest);
             }
             
-            if (senha == string.Empty)
+            if (loginDto.Senha == string.Empty)
             {
                 return Problem("O campo senha é obrigatório", statusCode: StatusCodes.Status400BadRequest);
             }
 
             try
             {
-               return Ok(_usuarioServico.AutenticarUsuarioComLogineSenha(login, senha));
+               return Ok(_usuarioServico.AutenticarUsuarioComLogineSenha(loginDto.Login, loginDto.Senha));
             }
             catch (UsuarioNaoEncontradoExceção e)
             {

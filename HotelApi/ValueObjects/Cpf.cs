@@ -11,7 +11,10 @@ namespace HotelApi.ValueObjects
             _value = value;
         }
 
-        public override string ToString() => _value;
+        public override string ToString()
+        {
+            return _value;
+        }
 
         public static implicit operator Cpf(string input) => Parse(input);
 

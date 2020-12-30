@@ -16,18 +16,24 @@ namespace HotelApi.Data.UnitOfWork
         public IUsuarioRepositorio UsuarioRepositorio { get; }
         public IPessoaRepositorio PessoaRepositorio { get; }
         public IEnderecoRepositorio EnderecoRepositorio { get; }
+        public IEstadoRepositorio EstadoRepositorio { get; }
+        public ICidadeRepositorio CidadeRepositorio { get; }
 
         public UnitOfWork(ApplicationContext dbContexto,
             IClienteRepositorio clienteRepositorio,
             IUsuarioRepositorio usuarioRepositorio,
             IEnderecoRepositorio enderecoRepositorio,
-            IPessoaRepositorio pessoaRepositorio)
+            IPessoaRepositorio pessoaRepositorio,
+            IEstadoRepositorio estadoRepositorio,
+            ICidadeRepositorio cidadeRepositorio)
         {
             _dbContexto = dbContexto;
             ClienteRepositorio = clienteRepositorio;
             UsuarioRepositorio = usuarioRepositorio;
             PessoaRepositorio = pessoaRepositorio;
             EnderecoRepositorio = enderecoRepositorio;
+            EstadoRepositorio = estadoRepositorio;
+            CidadeRepositorio = cidadeRepositorio;
         }
         
         public void Commit()

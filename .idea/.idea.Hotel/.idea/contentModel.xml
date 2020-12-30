@@ -9,13 +9,17 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="ClientesController.cs" t="Include" />
+          <e p="EnderecoController.cs" t="Include" />
+          <e p="EstadosController.cs" t="Include" />
           <e p="UsuarioController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="ApplicationContext.cs" t="Include" />
           <e p="Configuracoes" t="Include">
+            <e p="CidadeConfiguracao.cs" t="Include" />
             <e p="ClienteConfiguracao.cs" t="Include" />
             <e p="EnderecoConfiguracao.cs" t="Include" />
+            <e p="EstadoConfiguracao.cs" t="Include" />
             <e p="FuncionarioConfiguracao.cs" t="Include" />
             <e p="HotelConfiguracao.cs" t="Include" />
             <e p="PessoaConfiguracao.cs" t="Include" />
@@ -23,8 +27,10 @@
             <e p="UsuarioConfiguracao.cs" t="Include" />
           </e>
           <e p="Repositorios" t="Include">
+            <e p="CidadeRepostorio.cs" t="Include" />
             <e p="ClienteRepositorio.cs" t="Include" />
             <e p="EnderecoRepositorio.cs" t="Include" />
+            <e p="EstadoRepositorio.cs" t="Include" />
             <e p="PessoaRepositorio.cs" t="Include" />
             <e p="Repositorio.cs" t="Include" />
             <e p="UsuarioRepositorio.cs" t="Include" />
@@ -36,9 +42,11 @@
         </e>
         <e p="Dominio" t="Include">
           <e p="Entidades" t="Include">
+            <e p="Cidade.cs" t="Include" />
             <e p="ClienteEntidade.cs" t="Include" />
             <e p="Endereco.cs" t="Include" />
             <e p="Entidade.cs" t="Include" />
+            <e p="Estado.cs" t="Include" />
             <e p="Funcionario.cs" t="Include" />
             <e p="HotelEntidade.cs" t="Include" />
             <e p="Pessoa.cs" t="Include" />
@@ -46,14 +54,19 @@
             <e p="UsuarioEntidade.cs" t="Include" />
           </e>
           <e p="Repositorios" t="Include">
+            <e p="ICidadeRepositorio.cs" t="Include" />
             <e p="IClienteRepositorio.cs" t="Include" />
             <e p="IEnderecoRepositorio.cs" t="Include" />
+            <e p="IEstadoRepositorio.cs" t="Include" />
             <e p="IPessoaRepositorio.cs" t="Include" />
             <e p="IRepositorio.cs" t="Include" />
             <e p="IUsuarioRepositorio.cs" t="Include" />
           </e>
           <e p="Servicos" t="Include">
+            <e p="ICidadeServico.cs" t="Include" />
             <e p="IClienteServico.cs" t="Include" />
+            <e p="IEnderecoServico.cs" t="Include" />
+            <e p="IPessoaServico.cs" t="Include" />
             <e p="ITokenServico.cs" t="Include" />
             <e p="IUsuarioServico.cs" t="Include" />
           </e>
@@ -63,14 +76,37 @@
             <e p="InsercaoClienteDTO.cs" t="Include" />
             <e p="ListagemClienteDTO.cs" t="Include" />
           </e>
+          <e p="Endereco" t="Include">
+            <e p="InsercaoEnderecoDTO.cs" t="Include" />
+          </e>
+          <e p="Login" t="Include">
+            <e p="LoginDTO.cs" t="Include" />
+          </e>
+          <e p="Pessoa" t="Include">
+            <e p="InsercaoPessoaDTO.cs" t="Include" />
+          </e>
           <e p="Usuario" t="Include">
             <e p="UsuarioInsercaoDTO.cs" t="Include" />
           </e>
         </e>
-        <e p="Excecões" t="Include">
+        <e p="Excecoes" t="Include">
+          <e p="PessoaJaCadastradaExcecao.cs" t="Include" />
           <e p="UsuarioNaoEncontradoExceção.cs" t="Include" />
         </e>
         <e p="HotelApi.csproj" t="IncludeRecursive" />
+        <e p="Infraestrutura" t="Include">
+          <e p="Interfaces" t="Include">
+            <e p="IConsultaCep.cs" t="Include" />
+          </e>
+          <e p="Servicos" t="Include">
+            <e p="ConsultaEnderecoViaCep.cs" t="Include" />
+          </e>
+          <e p="Transporte" t="Include">
+            <e p="RetornoCepTransporte.cs" t="Include" />
+            <e p="Transporte.cs" t="Include" />
+            <e p="ViaCepRetornoTransporte.cs" t="Include" />
+          </e>
+        </e>
         <e p="Migracoes" t="Include">
           <e p="20201224150632_PrimeiraMigracao.cs" t="Include" />
           <e p="20201224150632_PrimeiraMigracao.Designer.cs" t="Include" />
@@ -88,6 +124,8 @@
           <e p="20201226144957_IncluindoCampoDocumentoModeloHotel.Designer.cs" t="Include" />
           <e p="20201226183923_RefatorandoABase.cs" t="Include" />
           <e p="20201226183923_RefatorandoABase.Designer.cs" t="Include" />
+          <e p="20201229191452_CriacaoTabelasCidadesEnderecos.cs" t="Include" />
+          <e p="20201229191452_CriacaoTabelasCidadesEnderecos.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -102,7 +140,10 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Servicos" t="Include">
+          <e p="CidadeServico.cs" t="Include" />
           <e p="ClienteServico.cs" t="Include" />
+          <e p="EnderecoServico.cs" t="Include" />
+          <e p="PessoaServico.cs" t="Include" />
           <e p="TokenServico.cs" t="Include" />
           <e p="UsuarioServico.cs" t="Include" />
         </e>

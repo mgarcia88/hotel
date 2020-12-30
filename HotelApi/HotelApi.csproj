@@ -32,6 +32,7 @@
     <Compile Remove="Configuracoes\**" />
     <Compile Remove="Dominio\Repositorios\IServicoToken.cs" />
     <Compile Remove="Dominio\Servicos\IServicoToken.cs" />
+    <Compile Remove="DTOs\Endereco\ConsultaCepEnderecoDTO.cs" />
   </ItemGroup>
 
   <ItemGroup>

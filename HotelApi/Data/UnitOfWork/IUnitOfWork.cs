@@ -14,5 +14,7 @@ namespace HotelApi.Data.UnitOfWork
         IUsuarioRepositorio UsuarioRepositorio { get; }
         IPessoaRepositorio PessoaRepositorio { get; }
         IEnderecoRepositorio EnderecoRepositorio { get; }
+        IEstadoRepositorio EstadoRepositorio { get; }
+        ICidadeRepositorio CidadeRepositorio { get; }
     }
 }

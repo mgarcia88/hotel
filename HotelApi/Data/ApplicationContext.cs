@@ -12,6 +12,8 @@ namespace HotelApi.Data
         public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Pessoa> Pessoas { get; set; }
         public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Estado> Estados { get; set; }
+        public DbSet<Cidade> Cidades { get; set; }
         
         // Necessário para o EF Tools
         public ApplicationContext()
@@ -36,6 +38,8 @@ namespace HotelApi.Data
             modelBuilder.ApplyConfiguration(new PessoaConfiguracao());
             modelBuilder.ApplyConfiguration(new FuncionarioConfiguracao());
             modelBuilder.ApplyConfiguration(new EnderecoConfiguracao());
+            modelBuilder.ApplyConfiguration(new EstadoConfiguracao());
+            modelBuilder.ApplyConfiguration(new CidadeConfiguracao());
 
             //modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationContext).Assembly);
         }

@@ -5,6 +5,8 @@ using HotelApi.Data.Repositorios;
 using HotelApi.Data.UnitOfWork;
 using HotelApi.Dominio.Repositorio;
 using HotelApi.Dominio.Servicos;
+using HotelApi.Infraestrutura.Interfaces;
+using HotelApi.Infraestrutura.Servicos;
 using HotelApi.Servicos;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -29,6 +31,7 @@ namespace HotelApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpClient();
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
@@ -75,6 +78,10 @@ namespace HotelApi
             services.AddScoped<IEnderecoRepositorio, EnderecoRepositorio>();
             services.AddScoped<IEnderecoServico, EnderecoServico>();
             services.AddScoped<IPessoaServico, PessoaServico>();
+            services.AddScoped<IConsultaCep, ConsultaEnderecoViaCep>();
+            services.AddScoped<IEstadoRepositorio, EstadoRepositorio>();
+            services.AddScoped<ICidadeRepositorio, CidadeRepostorio>();
+            services.AddScoped<ICidadeServico,CidadeServico>();
             
             var key = Encoding.ASCII.GetBytes("fedaf7d8863b48e197b9287d492b708e");
             services.AddAuthentication(x =>

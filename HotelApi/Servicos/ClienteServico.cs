@@ -45,12 +45,12 @@ namespace HotelApi.Servicos
                 var endereco = _enderecoServico.InserirEndereco(insercaoClienteDto.Endereco, pessoa.Id);
 
                 var Cliente = new Cliente
-                {
-                    TelefoneCelular = insercaoClienteDto.TelefoneCelular,
-                    PessoaId = pessoa.Id,
-                    HotelId =  usuarioLogado.HotelId,
-                    EnderecoId = endereco.Id
-                };
+                (
+                    insercaoClienteDto.TelefoneCelular,
+                    pessoa.Id,
+                    usuarioLogado.HotelId,
+                    endereco.Id
+                );
 
                 _unitOfWork.ClienteRepositorio.Incluir(Cliente);
                 await _unitOfWork.CommitTransaction();

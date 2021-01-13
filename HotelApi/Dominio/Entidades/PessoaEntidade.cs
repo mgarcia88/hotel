@@ -9,9 +9,5 @@ namespace HotelApi.Dominio.Entidades
         public Cpf Documento { get; set; }
 
         public Email Email { get; set; }
-
-        public Endereco Endereco { get; set; }
-
-        public int EnderecoId { get; set; }
     }
 }

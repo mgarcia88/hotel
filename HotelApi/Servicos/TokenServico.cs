@@ -19,7 +19,9 @@ namespace HotelApi.Servicos
                 Subject = new ClaimsIdentity(new Claim[]
                 {
                     new Claim(ClaimTypes.Name, usuario.Login),
-                    new Claim(ClaimTypes.Role, usuario.UsuariosGrupo.ToString())
+                    new Claim(ClaimTypes.Role, usuario.UsuariosGrupo.ToString()),
+                    new Claim("idUsuario", usuario.Id.ToString()),
+                    new Claim("hotelId", usuario.Funcionario.HotelId.ToString()), 
                 }),
                 Expires = DateTime.UtcNow.AddHours(2),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

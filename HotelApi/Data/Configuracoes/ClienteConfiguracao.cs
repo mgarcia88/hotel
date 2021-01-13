@@ -16,6 +16,8 @@ namespace HotelApi.Data.Configuracoes
                 .ValueGeneratedOnAdd();
             builder.Property(c => c.PessoaId).HasColumnType("INT").IsRequired();
             builder.Property(c => c.TelefoneCelular).HasColumnType("CHAR(15)").IsRequired();
+            builder.Property(c => c.HotelId).IsRequired();
+            builder.Property(c => c.EnderecoId).IsRequired();
         }
     }
 }

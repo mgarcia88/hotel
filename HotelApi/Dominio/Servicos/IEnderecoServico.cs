@@ -7,7 +7,7 @@ namespace HotelApi.Dominio.Servicos
 {
     public interface IEnderecoServico
     {
-        Endereco InserirEndereco(InsercaoEnderecoDTO endereco);
+        Endereco InserirEndereco(InsercaoEnderecoDTO endereco, int PessoaId);
 
         Task<RetornoCepTransporte> RecuperarEnderecoPeloCep(string cep);
     }

@@ -14,7 +14,8 @@ namespace HotelApi.Data.Repositorios
 
         public async Task<Usuario> AutenticarUsuarioComLogineSenha(string login, string senha)
         {
-           return await DbSet.AsNoTracking().
+           return await DbSet.Include(f => f.Funcionario)
+                .ThenInclude(h => h.Hotel).AsNoTracking().
                 FirstOrDefaultAsync(u => u.Login == login && u.Senha == senha);
         }
     }

@@ -3,15 +3,17 @@ using System;
 using HotelApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace HotelApi.Migracoes
+namespace HotelApi.migracoes
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20201230193935_CriandoRelacionamentoUsuariosFuncionariosHotel")]
+    partial class CriandoRelacionamentoUsuariosFuncionariosHotel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,12 +59,6 @@ namespace HotelApi.Migracoes
                         .HasColumnType("DATE")
                         .HasDefaultValueSql("NOW()");
 
-                    b.Property<int>("EnderecoId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("HotelId")
-                        .HasColumnType("integer");
-
                     b.Property<int>("PessoaId")
                         .HasColumnType("INT");
 
@@ -71,8 +67,6 @@ namespace HotelApi.Migracoes
                         .HasColumnType("CHAR(15)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EnderecoId");
 
                     b.HasIndex("PessoaId");
 
@@ -168,9 +162,6 @@ namespace HotelApi.Migracoes
                     b.Property<DateTime>("DataDemissao")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<int>("EnderecoId")
-                        .HasColumnType("integer");
-
                     b.Property<int>("HotelId")
                         .HasColumnType("integer");
 
@@ -178,8 +169,6 @@ namespace HotelApi.Migracoes
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EnderecoId");
 
                     b.HasIndex("HotelId");
 
@@ -258,11 +247,16 @@ namespace HotelApi.Migracoes
                         .HasColumnName("Email")
                         .HasColumnType("VARCHAR(70)");
 
+                    b.Property<int>("EnderecoId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("VARCHAR(60)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EnderecoId");
 
                     b.ToTable("Pessoas");
                 });
@@ -354,12 +348,6 @@ namespace HotelApi.Migracoes
 
             modelBuilder.Entity("HotelApi.Dominio.Entidades.Cliente", b =>
                 {
-                    b.HasOne("HotelApi.Dominio.Entidades.Endereco", "Endereco")
-                        .WithMany()
-                        .HasForeignKey("EnderecoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("HotelApi.Dominio.Entidades.Pessoa", "Pessoa")
                         .WithMany()
                         .HasForeignKey("PessoaId")
@@ -369,12 +357,6 @@ namespace HotelApi.Migracoes
 
             modelBuilder.Entity("HotelApi.Dominio.Entidades.Funcionario", b =>
                 {
-                    b.HasOne("HotelApi.Dominio.Entidades.Endereco", "Endereco")
-                        .WithMany()
-                        .HasForeignKey("EnderecoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("HotelApi.Dominio.Entidades.Hotel", "Hotel")
                         .WithMany()
                         .HasForeignKey("HotelId")
@@ -389,6 +371,15 @@ namespace HotelApi.Migracoes
                 });
 
             modelBuilder.Entity("HotelApi.Dominio.Entidades.Hotel", b =>
+                {
+                    b.HasOne("HotelApi.Dominio.Entidades.Endereco", "Endereco")
+                        .WithMany()
+                        .HasForeignKey("EnderecoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("HotelApi.Dominio.Entidades.Pessoa", b =>
                 {
                     b.HasOne("HotelApi.Dominio.Entidades.Endereco", "Endereco")
                         .WithMany()

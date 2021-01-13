@@ -7,5 +7,6 @@ namespace HotelApi.Infraestrutura.Interfaces
     public interface IConsultaCep
     {
         Task<ViaCepRetornoTransporte> RecuperarEnderecoPeloCep(string cep);
+
     }
 }

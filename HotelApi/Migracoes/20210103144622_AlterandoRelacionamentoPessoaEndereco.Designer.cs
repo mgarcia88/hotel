@@ -3,15 +3,17 @@ using System;
 using HotelApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace HotelApi.Migracoes
+namespace HotelApi.migracoes
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20210103144622_AlterandoRelacionamentoPessoaEndereco")]
+    partial class AlterandoRelacionamentoPessoaEndereco
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,7 +59,7 @@ namespace HotelApi.Migracoes
                         .HasColumnType("DATE")
                         .HasDefaultValueSql("NOW()");
 
-                    b.Property<int>("EnderecoId")
+                    b.Property<int?>("EnderecoId")
                         .HasColumnType("integer");
 
                     b.Property<int>("HotelId")
@@ -118,7 +120,12 @@ namespace HotelApi.Migracoes
                         .HasColumnType("character varying(10)")
                         .HasMaxLength(10);
 
+                    b.Property<int>("PessoaId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("PessoaId");
 
                     b.ToTable("Enderecos");
                 });
@@ -168,9 +175,6 @@ namespace HotelApi.Migracoes
                     b.Property<DateTime>("DataDemissao")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<int>("EnderecoId")
-                        .HasColumnType("integer");
-
                     b.Property<int>("HotelId")
                         .HasColumnType("integer");
 
@@ -178,8 +182,6 @@ namespace HotelApi.Migracoes
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EnderecoId");
 
                     b.HasIndex("HotelId");
 
@@ -356,10 +358,17 @@ namespace HotelApi.Migracoes
                 {
                     b.HasOne("HotelApi.Dominio.Entidades.Endereco", "Endereco")
                         .WithMany()
-                        .HasForeignKey("EnderecoId")
+                        .HasForeignKey("EnderecoId");
+
+                    b.HasOne("HotelApi.Dominio.Entidades.Pessoa", "Pessoa")
+                        .WithMany()
+                        .HasForeignKey("PessoaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
 
+            modelBuilder.Entity("HotelApi.Dominio.Entidades.Endereco", b =>
+                {
                     b.HasOne("HotelApi.Dominio.Entidades.Pessoa", "Pessoa")
                         .WithMany()
                         .HasForeignKey("PessoaId")
@@ -369,12 +378,6 @@ namespace HotelApi.Migracoes
 
             modelBuilder.Entity("HotelApi.Dominio.Entidades.Funcionario", b =>
                 {
-                    b.HasOne("HotelApi.Dominio.Entidades.Endereco", "Endereco")
-                        .WithMany()
-                        .HasForeignKey("EnderecoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("HotelApi.Dominio.Entidades.Hotel", "Hotel")
                         .WithMany()
                         .HasForeignKey("HotelId")

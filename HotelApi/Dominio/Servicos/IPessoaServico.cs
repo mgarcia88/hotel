@@ -5,6 +5,6 @@ namespace HotelApi.Dominio.Servicos
 {
     public interface IPessoaServico
     {
-        Pessoa InserirPessoa(InsercaoPessoaDTO pessoaDto, int enderecoId);
+        Pessoa InserirPessoa(InsercaoPessoaDTO pessoaDto);
     }
 }

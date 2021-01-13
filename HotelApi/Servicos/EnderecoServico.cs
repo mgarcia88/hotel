@@ -26,18 +26,19 @@ namespace HotelApi.Servicos
             _cidadeServico = cidadeServico;
         }
 
-        public Endereco InserirEndereco(InsercaoEnderecoDTO insercaoEnderecoDto)
+        public Endereco InserirEndereco(InsercaoEnderecoDTO insercaoEnderecoDto, int pessoaId)
         {
             var Endereco = new Endereco
-            {
-                Cep = insercaoEnderecoDto.Cep,
-                Logradouro = insercaoEnderecoDto.Logradouro,
-                Bairro = insercaoEnderecoDto.Bairro,
-                Numero = insercaoEnderecoDto.Numero,
-                CidadeId = 1,
-                Complemento = insercaoEnderecoDto.Complemento
-            };
-
+            (
+                insercaoEnderecoDto.Cep,
+                insercaoEnderecoDto.Logradouro,
+                insercaoEnderecoDto.Bairro,
+                insercaoEnderecoDto.Numero,
+                insercaoEnderecoDto.Complemento,
+                insercaoEnderecoDto.CidadeId
+            );
+            
+            
             _unitOfWork.EnderecoRepositorio.Incluir(Endereco);
             _unitOfWork.Commit();
 
@@ -50,43 +51,55 @@ namespace HotelApi.Servicos
             {
                 var enderecoViaCep = await _consultaCep.RecuperarEnderecoPeloCep(cep);
 
-                if (enderecoViaCep.Cep == null)
+                if (enderecoViaCep != null)
                 {
+                    if (enderecoViaCep.Cep == null)
+                    {
+                        return new RetornoCepTransporte()
+                        {
+                            Sucesso = false,
+                            Mensagem = "Cep não encontrado"
+                        };
+                    }
+
+                    var cidadeDoBancoDeDados = await
+                        _cidadeServico.RecuperarCidadePeloNome(enderecoViaCep.Localidade);
+
+                    var cidadeId = 0;
+
+                    if (cidadeDoBancoDeDados == null)
+                    {
+                        var cidadeNova = await
+                            InserirCidadeNova(enderecoViaCep.Localidade, enderecoViaCep.UF);
+
+                        cidadeId = cidadeNova.Id;
+                    }
+                    else
+                    {
+                        cidadeId = cidadeDoBancoDeDados.Id;
+                    }
+
                     return new RetornoCepTransporte()
                     {
-                        Sucesso = false
+                        Cep = enderecoViaCep.Cep,
+                        Logradouro = enderecoViaCep.Logradouro,
+                        Localidade = enderecoViaCep.Localidade,
+                        Bairro = enderecoViaCep.Bairro,
+                        Complemento = enderecoViaCep.Complemento,
+                        UF = enderecoViaCep.UF,
+                        CidadeId = cidadeId,
+                        Mensagem = "Endereço recuperado com sucesso",
+                        Sucesso = true
                     };
-                }
-
-                var cidadeDoBancoDeDados = await
-                    _cidadeServico.RecuperarCidadePeloNome(enderecoViaCep.Localidade);
-
-                var cidadeId = 0;
-
-                if (cidadeDoBancoDeDados == null)
-                {
-                    var cidadeNova = await 
-                    InserirCidadeNova(enderecoViaCep.Localidade, enderecoViaCep.UF);
-
-                    cidadeId = cidadeNova.Id;
                 }
                 else
                 {
-                    cidadeId = cidadeDoBancoDeDados.Id;
+                    return new RetornoCepTransporte()
+                    {
+                        Sucesso = false,
+                        Mensagem = "Cep não encontrado"
+                    };
                 }
-
-                return new RetornoCepTransporte()
-                {
-                    Cep = enderecoViaCep.Cep,
-                    Logradouro = enderecoViaCep.Logradouro,
-                    Localidade = enderecoViaCep.Localidade,
-                    Bairro = enderecoViaCep.Bairro,
-                    Complemento = enderecoViaCep.Complemento,
-                    UF = enderecoViaCep.UF,
-                    CidadeId = cidadeId,
-                    Mensagem = "Endereço recuperado com sucesso",
-                    Sucesso = true
-                };
             }
             catch (Exception)
             {

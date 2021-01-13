@@ -7,6 +7,9 @@ using HotelApi.DTOs;
 using System.Linq;
 using System.Threading.Tasks;
 using HotelApi.DTOs.Cliente;
+using HotelApi.Excecões;
+using HotelApi.Infraestrutura.Interfaces;
+using HotelApi.ValueObjects;
 
 namespace HotelApi.Servicos
 {
@@ -15,34 +18,41 @@ namespace HotelApi.Servicos
         private IUnitOfWork _unitOfWork;
         private IEnderecoServico _enderecoServico;
         private IPessoaServico _pessoaServico;
-        
+        private readonly IUsuarioLogado _usuarioLogado;
+
         public ClienteServico(IUnitOfWork unitOfWork,
             IEnderecoServico enderecoServico,
-            IPessoaServico pessoaServico
-            )
+            IPessoaServico pessoaServico,
+            IUsuarioLogado usuarioLogado
+        )
         {
             _unitOfWork = unitOfWork;
             _enderecoServico = enderecoServico;
             _pessoaServico = pessoaServico;
+            _usuarioLogado = usuarioLogado;
         }
-        
+
         public async Task<dynamic> InserirCliente(InsercaoClienteDTO insercaoClienteDto)
         {
             try
             {
                 await _unitOfWork.BeginTransaction();
 
-                var endereco = _enderecoServico.InserirEndereco(insercaoClienteDto.Endereco);
+                var usuarioLogado = _usuarioLogado.RecuperarUsuarioLogado();
+                
+                var pessoa = _pessoaServico.InserirPessoa(insercaoClienteDto.Pessoa);
 
-                var pessoa = _pessoaServico.InserirPessoa(insercaoClienteDto.Pessoa, endereco.Id);
-            
+                var endereco = _enderecoServico.InserirEndereco(insercaoClienteDto.Endereco, pessoa.Id);
+
                 var Cliente = new Cliente
                 {
                     TelefoneCelular = insercaoClienteDto.TelefoneCelular,
-                    PessoaId = pessoa.Id
+                    PessoaId = pessoa.Id,
+                    HotelId =  usuarioLogado.HotelId,
+                    EnderecoId = endereco.Id
                 };
-            
-                var retorno =_unitOfWork.ClienteRepositorio.Incluir(Cliente);
+
+                _unitOfWork.ClienteRepositorio.Incluir(Cliente);
                 await _unitOfWork.CommitTransaction();
 
                 return new
@@ -64,11 +74,13 @@ namespace HotelApi.Servicos
 
         public List<ListagemClienteDTO> RecuperarClientes()
         {
-            var todosClientes = _unitOfWork.ClienteRepositorio.ObterTodos()
+            var usuarioLogado = _usuarioLogado.RecuperarUsuarioLogado();
+            
+            var todosClientes = _unitOfWork.ClienteRepositorio.ObterTodos(usuarioLogado.HotelId)
                 .Select(x =>
                     new ListagemClienteDTO()
                     {
-                        Id = x.Id, TelefoneCelular = x.TelefoneCelular, 
+                        Id = x.Id, TelefoneCelular = x.TelefoneCelular,
                         Documento = x.Pessoa.Documento.ToString(),
                         Email = x.Pessoa.Email.ToString(),
                         Pessoa = new Pessoa()
@@ -76,19 +88,40 @@ namespace HotelApi.Servicos
                             Nome = x.Pessoa.Nome,
                             Documento = x.Pessoa.Documento,
                             Email = x.Pessoa.Email,
-                            Endereco =  new Endereco()
-                            {
-                                Cep = x.Pessoa.Endereco.Cep,
-                                Logradouro = x.Pessoa.Endereco.Logradouro,
-                                Numero = x.Pessoa.Endereco.Numero,
-                                Bairro = x.Pessoa.Endereco.Bairro,
-                                Complemento = x.Pessoa.Endereco.Complemento
-                            }
-                        }
+                        },
+                        Endereco = new Endereco(x.Endereco.Cep,x.Endereco.Logradouro,
+                            x.Endereco.Numero,x.Endereco.Bairro, x.Endereco.Complemento, x.Endereco.CidadeId)
                     })
                 .ToList();
 
             return todosClientes;
+        }
+
+        public ListagemClienteDTO PesquisarClientePeloDocumento(string cpf)
+        {
+            var documento = Cpf.Parse(cpf);
+
+            var cliente = _unitOfWork.ClienteRepositorio.PesquisarClientePeloDocumento(documento);
+
+            if (cliente == null)
+            {
+                throw new ClienteNaoEncontradoExcecao("Cliente não encontrado na base de dados");
+            }
+
+            return new ListagemClienteDTO()
+            {
+                Id = cliente.Id, TelefoneCelular = cliente.TelefoneCelular,
+                Documento = cliente.Pessoa.Documento.ToString(),
+                Email = cliente.Pessoa.Email.ToString(),
+                Pessoa = new Pessoa()
+                {
+                    Nome = cliente.Pessoa.Nome,
+                    Documento = cliente.Pessoa.Documento,
+                    Email = cliente.Pessoa.Email,
+                },
+                Endereco = new Endereco(cliente.Endereco.Cep,cliente.Endereco.Logradouro,
+                    cliente.Endereco.Numero,cliente.Endereco.Bairro, cliente.Endereco.Complemento, cliente.Endereco.CidadeId)
+            };
         }
     }
 }

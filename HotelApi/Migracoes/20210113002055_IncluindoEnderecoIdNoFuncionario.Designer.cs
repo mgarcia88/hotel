@@ -3,15 +3,17 @@ using System;
 using HotelApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace HotelApi.Migracoes
+namespace HotelApi.migracoes
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20210113002055_IncluindoEnderecoIdNoFuncionario")]
+    partial class IncluindoEnderecoIdNoFuncionario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -118,7 +120,12 @@ namespace HotelApi.Migracoes
                         .HasColumnType("character varying(10)")
                         .HasMaxLength(10);
 
+                    b.Property<int>("PessoaId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("PessoaId");
 
                     b.ToTable("Enderecos");
                 });
@@ -360,6 +367,15 @@ namespace HotelApi.Migracoes
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("HotelApi.Dominio.Entidades.Pessoa", "Pessoa")
+                        .WithMany()
+                        .HasForeignKey("PessoaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("HotelApi.Dominio.Entidades.Endereco", b =>
+                {
                     b.HasOne("HotelApi.Dominio.Entidades.Pessoa", "Pessoa")
                         .WithMany()
                         .HasForeignKey("PessoaId")

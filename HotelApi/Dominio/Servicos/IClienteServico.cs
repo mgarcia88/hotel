@@ -11,5 +11,7 @@ namespace HotelApi.Dominio.Servicos
         Task<dynamic> InserirCliente(InsercaoClienteDTO insercaoClienteDto);
 
         List<ListagemClienteDTO> RecuperarClientes();
+
+        ListagemClienteDTO PesquisarClientePeloDocumento(string cpf);
     }
 }

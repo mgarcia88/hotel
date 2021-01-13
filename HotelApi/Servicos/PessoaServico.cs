@@ -15,7 +15,7 @@ namespace HotelApi.Servicos
             _unitOfWork = unitOfWork;
         }
 
-        public Pessoa InserirPessoa(InsercaoPessoaDTO pessoaDto, int enderecoId)
+        public Pessoa InserirPessoa(InsercaoPessoaDTO pessoaDto)
         {
             var pessoaBaseDados =
                 _unitOfWork.PessoaRepositorio.RecuperarPessoaPeloNumeroDoDocumento(pessoaDto.Documento.ToString());
@@ -29,8 +29,7 @@ namespace HotelApi.Servicos
             {
                 Nome = pessoaDto.Nome,
                 Documento = pessoaDto.Documento,
-                Email = pessoaDto.Email,
-                EnderecoId = enderecoId
+                Email = pessoaDto.Email
             };
 
             _unitOfWork.PessoaRepositorio.Incluir(Pessoa);

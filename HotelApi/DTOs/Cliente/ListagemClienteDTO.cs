@@ -12,5 +12,7 @@ namespace HotelApi.DTOs.Cliente
         public string Documento { get; set; }
         
         public string Email { get; set; }
+
+        public Dominio.Entidades.Endereco Endereco { get; set; }
     }
 }

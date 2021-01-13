@@ -5,12 +5,14 @@ using HotelApi.Data.Repositorios;
 using HotelApi.Data.UnitOfWork;
 using HotelApi.Dominio.Repositorio;
 using HotelApi.Dominio.Servicos;
+using HotelApi.Infraestrutura.Identidade;
 using HotelApi.Infraestrutura.Interfaces;
 using HotelApi.Infraestrutura.Servicos;
 using HotelApi.Servicos;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -82,7 +84,9 @@ namespace HotelApi
             services.AddScoped<IEstadoRepositorio, EstadoRepositorio>();
             services.AddScoped<ICidadeRepositorio, CidadeRepostorio>();
             services.AddScoped<ICidadeServico,CidadeServico>();
-            
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<IUsuarioLogado, UsuarioLogado>();
+
             var key = Encoding.ASCII.GetBytes("fedaf7d8863b48e197b9287d492b708e");
             services.AddAuthentication(x =>
                 {
